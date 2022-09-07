@@ -246,7 +246,7 @@ class base_engine(object):
 
                     if best_scores is not None:
                         for low_idx in score_poistion[:bottom]: 
-                            exchanged_vector[score_poistion[low_idx]] = np.random.choice(score_poistion[-top:])
+                            exchanged_vector[low_idx] = np.random.choice(score_poistion[-top:])
 
                     self.best_score_population = best_scores[score_poistion[-1]]
                     self.best_episode_length_population = best_length[score_poistion[-1]]
